@@ -1,0 +1,182 @@
+/* Reset dan Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kontainer Utama Aplikasi */
+.todo-app {
+    width: 100%;
+    max-width: 650px;
+    background-color: #2a2a3e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+/* Form Input */
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-form input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #4a4a6a;
+    border-radius: 8px;
+    background-color: #1a1a2e;
+    color: #f0f0f0;
+    font-size: 16px;
+}
+
+#todo-form input::placeholder {
+    color: #888;
+}
+
+#todo-form input:focus {
+    outline: none;
+    border-color: #8A2BE2;
+}
+
+/* Tombol Tambah */
+.add-btn {
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #8A2BE2; /* Warna Ungu */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #7b24ca;
+}
+
+/* Tombol Kontrol (Filter & Delete All) */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4a4a6a;
+    color: #f0f0f0;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #5a5a7a;
+}
+
+#delete-all-btn {
+    background-color: #9b59b6; /* Warna ungu lebih muda */
+    color: white;
+}
+
+#delete-all-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Area Daftar Tugas */
+.todo-list-container {
+    margin-top: 20px;
+}
+
+.todo-header {
+    display: flex;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #aaa;
+    border-bottom: 2px solid #4a4a6a;
+    margin-bottom: 10px;
+}
+
+.task-col { flex: 3; }
+.date-col { flex: 1.5; text-align: center; }
+.status-col { flex: 1; text-align: center; }
+.actions-col { flex: 1.5; text-align: center; }
+
+/* Item Tugas Individual */
+.todo-item {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a2e;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.todo-item.completed {
+    background-color: #2e2e4a;
+    opacity: 0.7;
+}
+
+.todo-item.completed .task-col {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todo-item span {
+    word-break: break-word;
+}
+
+/* Tombol Aksi di dalam Item */
+.todo-actions button {
+    margin: 0 5px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}
+
+.complete-btn {
+    background-color: #27ae60; /* Hijau */
+}
+.complete-btn:hover {
+    background-color: #229954;
+}
+
+.delete-btn {
+    background-color: #c0392b; /* Merah */
+}
+.delete-btn:hover {
+    background-color: #a93226;
+}
+
+.no-task-message {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
